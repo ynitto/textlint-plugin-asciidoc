@@ -51,7 +51,7 @@ This plugin recognize these file extension as asciidoc file.
 ## Alternatives
 
 - [azu/textlint-plugin-asciidoc-loose](https://github.com/azu/textlint-plugin-asciidoc-loose)
-- [textlint-plugin-asciidoctor](https://github.com/seikichi/textlint-plugin-asciidoctor]()
+- [textlint-plugin-asciidoctor](https://github.com/seikichi/textlint-plugin-asciidoctor)
 
 ## License
 

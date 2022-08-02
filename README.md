@@ -21,7 +21,7 @@ This is inspired by [textlint-plugin-asciidoctor](https://github.com/seikichi/te
 ```
 {
   "plugins": [
-    "asciidoc"
+    "@ynitto/asciidoc"
   ]
 }
 ```

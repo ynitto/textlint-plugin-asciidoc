@@ -1,0 +1,55 @@
+{
+  "name": "textlint-plugin-asciidoc",
+  "version": "0.0.1",
+  "description": "Asciidoc support for textlint.",
+  "keywords": [
+    "asciidoc",
+    "plugin",
+    "textlint"
+  ],
+  "homepage": "https://github.com/ynitto/textlint-plugin-asciidoc",
+  "bugs": {
+    "url": "https://github.com/ynitto/textlint-plugin-asciidoc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ynitto/textlint-plugin-asciidoc.git"
+  },
+  "license": "MIT",
+  "author": "ynitto",
+  "types": "lib/src/index.d.ts",
+  "main": "lib/src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "files": [
+    "lib",
+    "src",
+    "!*.tsbuildinfo"
+  ],
+  "scripts": {
+    "build": "tsc -b && tsc -b tsconfig.module.json",
+    "clean": "rimraf lib/ module/",
+    "prepublish": "npm run --if-present build",
+    "test": "jest",
+    "updateSnapshot": "jest --updateSnapshot",
+    "watch": "tsc -b --watch"
+  },
+  "dependencies": {
+    "@asciidoctor/core": "^2.1.0",
+    "html-to-text": "^8.2.0"
+  },
+  "devDependencies": {
+    "@textlint/kernel": "^12.2.1",
+    "@types/html-to-text": "^8.1.0",
+    "@types/jest": "^28.1.6",
+    "jest": "^28.1.3",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.7",
+    "typescript": "^4.4.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "email": "ynitto7@gmail.com"
+}

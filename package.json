@@ -1,6 +1,6 @@
 {
   "name": "@ynitto/textlint-plugin-asciidoc",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Asciidoc support for textlint.",
   "keywords": [
     "asciidoc",

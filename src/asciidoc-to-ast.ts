@@ -408,8 +408,10 @@ export class Converter {
   }
 
   findLocation(lines: string[], cursor: LineCursor, type: string): TxtNodeLineLocation | null {
+    let found = false;
+
     for (let i = cursor.min; i + lines.length - 1 <= cursor.max; i++) {
-      let found = true;
+      found = true;
       let offset = 0; // see "comment in paragraph" test case.
       const startIdx = cursor.startIdx || 0; // index into the line to begin the search
 
@@ -433,10 +435,9 @@ export class Converter {
         continue;
       }
 
-      const lastLine = lines[lines.length - 1];
+      const lastLine = lines[lines.length - 1] || "";
       const endLineNo = i + lines.length - 1 + offset;
-      const endColumn =
-        this.lines[endLineNo - 1].indexOf(lastLine) + lastLine.length;
+      const endColumn = this.lines[endLineNo - 1].indexOf(lastLine) + lastLine.length;
       const column = this.lines[i - 1].indexOf(lines[0]);
       return {
         // If the lines starts with //, set 0 instead of -1
